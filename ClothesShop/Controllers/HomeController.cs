@@ -28,5 +28,15 @@ namespace ClothesShop.Controllers
             };
             return View(homeViewModel);
         }
+        public IActionResult Details(int id)
+        {
+            var cloth = clothRepository.GetCloth(id);
+            if (cloth == null)
+            {
+                return NotFound();
+            }
+            return View(cloth);
+        }
     }
+
 }
