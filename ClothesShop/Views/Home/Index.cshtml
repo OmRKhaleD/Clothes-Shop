@@ -1,0 +1,17 @@
+﻿@model ClothesShop.ViewModels.HomeViewModel
+
+<h2>@Model.Title</h2>
+@foreach (var item in Model.Clothes)
+{
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail">
+            <img src="@item.ImageThumbnailUrl" alt="" style="width:150px; height:200px;"/>
+            <div class="caption">
+                <h3 class="pull-right">@item.Price.ToString("c")</h3>
+                <h3>@item.Name</h3>
+                <p>@item.ShortDescription</p>
+            </div>
+        </div>
+    </div>
+}
+

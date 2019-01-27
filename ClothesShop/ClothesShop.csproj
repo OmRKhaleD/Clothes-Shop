@@ -6,6 +6,35 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\images\boys1.png" />
+    <None Include="wwwroot\images\boys2.png" />
+    <None Include="wwwroot\images\boys3.png" />
+    <None Include="wwwroot\images\boys4.png" />
+    <None Include="wwwroot\images\boys5.png" />
+    <None Include="wwwroot\images\boys6.png" />
+    <None Include="wwwroot\images\bunny.jpg" />
+    <None Include="wwwroot\images\dress.png" />
+    <None Include="wwwroot\images\girls1.png" />
+    <None Include="wwwroot\images\girls2.png" />
+    <None Include="wwwroot\images\girls3.png" />
+    <None Include="wwwroot\images\men1.png" />
+    <None Include="wwwroot\images\men2.png" />
+    <None Include="wwwroot\images\men3.png" />
+    <None Include="wwwroot\images\men4.png" />
+    <None Include="wwwroot\images\men5.png" />
+    <None Include="wwwroot\images\men6.png" />
+    <None Include="wwwroot\images\men7.png" />
+    <None Include="wwwroot\images\shoes.jpg" />
+    <None Include="wwwroot\images\women1.png" />
+    <None Include="wwwroot\images\women2.png" />
+    <None Include="wwwroot\images\women3.png" />
+    <None Include="wwwroot\images\women4.png" />
+    <None Include="wwwroot\images\women5.png" />
+    <None Include="wwwroot\images\women6.png" />
+    <None Include="wwwroot\images\women7.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
