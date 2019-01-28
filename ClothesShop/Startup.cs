@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using ClothesShop.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Identity;
 
 namespace ClothesShop
 {
@@ -25,6 +26,7 @@ namespace ClothesShop
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ClothesDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<ClothesDbContext>();
             services.AddTransient<IClothRepository, ClothRepository>();
             services.AddTransient<IFeedbackRepository, FeedbckRepository>();
             services.AddMvc();
@@ -36,6 +38,7 @@ namespace ClothesShop
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
+            app.UseAuthentication();
             app.UseMvc(routs=> {
                 routs.MapRoute(
                     name:"default",

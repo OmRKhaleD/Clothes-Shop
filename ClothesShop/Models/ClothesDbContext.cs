@@ -1,12 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace ClothesShop.Models
 {
-    public class ClothesDbContext : DbContext
+    public class ClothesDbContext : IdentityDbContext<IdentityUser>
     {
         public ClothesDbContext(DbContextOptions<ClothesDbContext> options) : base(options)
         {
