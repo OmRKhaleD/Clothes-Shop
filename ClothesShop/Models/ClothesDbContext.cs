@@ -8,15 +8,11 @@ namespace ClothesShop.Models
 {
     public class ClothesDbContext : DbContext
     {
-        public ClothesDbContext(DbContextOptions<ClothesDbContext> options):base(options)
+        public ClothesDbContext(DbContextOptions<ClothesDbContext> options) : base(options)
         {
 
         }
         public DbSet<Cloth> Clothes { get; set; }
-
-        internal object Find(int clothId)
-        {
-            throw new NotImplementedException();
-        }
+        public DbSet<Feedback> Feedbacks { get; set; }
     }
 }

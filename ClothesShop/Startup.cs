@@ -26,6 +26,7 @@ namespace ClothesShop
         {
             services.AddDbContext<ClothesDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddTransient<IClothRepository, ClothRepository>();
+            services.AddTransient<IFeedbackRepository, FeedbckRepository>();
             services.AddMvc();
         }
 

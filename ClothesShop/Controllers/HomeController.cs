@@ -12,7 +12,7 @@ namespace ClothesShop.Controllers
 {
     public class HomeController : Controller
     {
-        IClothRepository clothRepository;
+        private readonly IClothRepository clothRepository;
         public HomeController(IClothRepository cloth)
         {
             clothRepository = cloth;
